@@ -1,0 +1,5 @@
+{
+  "name": "Infinity AI Biomechanics",
+  "description": "An advanced AI platform using Gemini 2.5 Flash to analyze athlete biomechanics, detect muscle weaknesses, and prescribe training protocols. Features self-evolving model simulation.",
+  "requestFramePermissions": []
+}

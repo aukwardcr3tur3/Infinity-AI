@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="infinityGradient" x1="0" y1="100" x2="200" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Glow Effect Background -->
+  <path d="M50,100 C50,70 90,70 100,100 C110,130 150,130 150,100 C150,70 110,70 100,100 C90,130 50,130 50,100 Z" 
+        stroke="#22d3ee" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.4" filter="url(#glow)" />
+
+  <!-- Main Infinity Loop -->
+  <path d="M50,100 C50,60 90,60 100,100 C110,140 150,140 150,100 C150,60 110,60 100,100 C90,140 50,140 50,100 Z" 
+        stroke="url(#infinityGradient)" stroke-width="14" stroke-linecap="round" fill="none" />
+        
+  <!-- Shine Highlights -->
+  <path d="M50,100 C50,60 90,60 100,100" stroke="white" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" stroke-dasharray="10 30" />
+  
+  <!-- Floating Orbs -->
+  <circle cx="150" cy="100" r="6" fill="#a855f7" filter="url(#glow)">
+     <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="50" cy="100" r="6" fill="#06b6d4" filter="url(#glow)">
+     <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>
